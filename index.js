@@ -9,7 +9,7 @@ app.get('/api/movie', (request, response) => {
   response.send('Recuperation de tous les films');
   });
 app.get('/api/movie/:id', (request, response) => {
-  response.json({id : request.param.id});
+  response.json({id : request.params.id});
   });
 app.get("/api/employee?name=?", (request, response) => {
     response.status(404).send(`Impossible de récupérer l'employé ${request.query.name}`);
